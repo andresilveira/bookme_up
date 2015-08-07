@@ -1,0 +1,10 @@
+%h1= <%= class_name %>.model_name.human
+%br
+<% attributes.each do |attribute| %>
+  %p
+    %b= t("activerecord.attributes.<%= singular_table_name %>.<%= attribute.name %>")
+    =@<%= singular_table_name %>.<%= attribute.name %>
+<% end %>
+.form-actions
+  =link_to t("helpers.links.back").html_safe, <%= plural_table_name %>_path, class: 'btn btn-link'
+  =link_to t("helpers.actions.edit"), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: 'btn btn-default'

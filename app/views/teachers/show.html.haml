@@ -1,0 +1,10 @@
+%h1= Teacher.model_name.human
+%br
+
+  %p
+    %b= t("activerecord.attributes.teacher.name")
+    =@teacher.name
+
+.form-actions
+  =link_to t("helpers.links.back").html_safe, teachers_path, class: 'btn btn-link'
+  =link_to t("helpers.actions.edit"), edit_teacher_path(@teacher), class: 'btn btn-default'

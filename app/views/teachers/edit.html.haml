@@ -1,0 +1,7 @@
+%h1= t("helpers.actions.edit", model: Teacher.model_name.human)
+
+= render 'form'
+
+.form-actions
+  = link_to t("helpers.links.back").html_safe, teachers_path, class: 'btn btn-link'
+  = link_to t("helpers.actions.show"), @teacher, class: 'btn btn-default'

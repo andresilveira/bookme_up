@@ -11,3 +11,11 @@ en:
       listing: "Listing %{model}"
     links:
       back: "&larr; Back"
+  activerecord:
+    models:
+      room:
+        one: Room
+        other: Rooms
+      teacher: 
+        one: Teacher
+        other: Teachers

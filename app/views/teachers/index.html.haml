@@ -1,0 +1,17 @@
+%h1= t('helpers.headers.listing', model: Teacher.model_name.human(count:2))
+%br
+%table.table.table-striped
+  %tr
+    %th= t('activerecord.attributes.teacher.name')
+    %th
+  - @teachers.each do |teacher|
+    %tr
+      %td= t('activerecord.attributes.teacher.name')
+      %td
+        .btn-group
+          = link_to t("helpers.actions.show"), teacher_path(teacher), class: "btn btn-default"
+          = link_to t("helpers.actions.edit"), edit_teacher_path(teacher), class: "btn btn-default"
+          = link_to t("helpers.actions.destroy"), teacher_path(teacher), method: :delete, data: { confirm: t('helpers.messages.confirm') }, class: "btn btn-danger"
+
+%br
+= link_to t('helpers.actions.new', model: Teacher.model_name.human), new_teacher_path, class: "btn btn-primary"

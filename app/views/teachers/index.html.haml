@@ -6,7 +6,7 @@
     %th
   - @teachers.each do |teacher|
     %tr
-      %td= t('activerecord.attributes.teacher.name')
+      %td= teacher.name
       %td
         .btn-group
           = link_to t("helpers.actions.show"), teacher_path(teacher), class: "btn btn-default"

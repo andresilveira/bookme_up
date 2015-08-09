@@ -7,6 +7,11 @@ describe Name do
     @name = Name.new('Little John')
   end
 
+  it "when initialized raw_name is an string" do
+    Name.new(nil).raw.must_equal ""
+    Name.new.raw.must_equal ""
+  end
+
   it "A Little John name should be equal to Little John" do
     @name.to_s.must_equal 'Little John'
   end
